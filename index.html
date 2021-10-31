@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+</head>
+<body>
+  <header>
+    <div class="header container">
+      <h1 class="header__title">IP Address Tracker</h1>
+      
+      <form role="search">
+        <input type="search" name="searchInput" id="searchInput" placeholder="Search for any IP address or domain" class="header__search" aria-label="Search for an IP address" autofocus>
+        
+        <input type="image" src="./images/icon-arrow.svg" alt="Submit" class="header__submit">
+      </form>
+    </div>
+  
+    <section class="results container">
+      <div class="results__section">
+        <h2 class="results__title">
+          IP Address
+        </h2>
+        
+        <p class="results__result ip-address">
+        </p>
+      </div>
+      
+      <div class="results__section">
+        <h2 class="results__title">
+          Location
+        </h2>
+        
+        <p class="results__result location">
+        </p>
+      </div>
+      
+      <div class="results__section">
+        <h2 class="results__title">
+          Timezone
+        </h2>
+        
+        <p class="results__result">
+          UTC <span class="timezone"></span>
+        </p>
+      </div>
+      
+      <div class="results__section">
+        <h2 class="results__title">
+          ISP
+        </h2>
+        
+        <p class="results__result results__result--isp isp">
+        </p>
+      </div>
+    </section>    
+  </header>
+  
+  <main id="mapId2" class="mapId2">
+    <h2 class="screen-reader-only">Map showing your IP address location</h2>
+  </main>
+  
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <script src="tracker.js"></script>
+</script>
+</body>
+</html>
