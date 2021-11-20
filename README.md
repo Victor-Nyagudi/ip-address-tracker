@@ -52,7 +52,7 @@ Exposing your API Key publicly can lead to other people using it to make request
 
 ### Screenshot
 
-![](./screenshots/ip-address-tracker-fullscreen.png)
+![](./dist/screenshots/ip-address-tracker-fullscreen.png)
 
 I've included 4 screenshots in the `/screenshots` folder: mobile, tablet, desktop, and fullscreen.
 
@@ -66,7 +66,7 @@ I've included 4 screenshots in the `/screenshots` folder: mobile, tablet, deskto
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS
 - Flexbox
 - Mobile-first workflow
 - [Leaflet.js](https://leafletjs.com/) - JS library

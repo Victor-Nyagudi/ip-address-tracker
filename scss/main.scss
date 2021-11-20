@@ -1,0 +1,122 @@
+@import './config';
+
+body {
+    font-family: $primary-font;
+    font-size: 1.125rem;
+    font-weight: getFontWeight('regular');
+    color: getColor('very-dark-gray');
+
+    margin: 0;
+}
+
+h1, h2, p { margin: 0; }
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    
+    background-image: url('../images/pattern-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+    padding-bottom: 8.3em;
+
+    .header {
+        &__title {
+            font-size: 1.7rem;
+            font-weight: getFontWeight('bold');
+            color: white;
+        
+            padding: 1em 0;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+        }
+
+        input:hover { cursor: pointer; }
+
+        &__search {
+            font-family: $secondary-font;
+            font-size: 1.125rem;
+            font-weight: getFontWeight('regular');
+            color: getColor('very-dark-gray');
+            
+            border: none;
+            border-radius: $border-radius 0 0 $border-radius;
+            
+            width: 82%;
+            max-width: 550px;
+            min-height: 100%;
+        
+            outline: none;
+            padding: 1em 1.2em;
+
+            &::placeholder {
+                font-family: $secondary-font;
+                font-weight: getFontWeight('regular');
+                color: getColor('dark-gray');
+            }
+        }
+
+        &__submit {
+            border: none;
+            background-color: black;
+            padding: 1.6em;
+        
+            border-radius: 0 $border-radius $border-radius 0;
+
+            &:hover { background-color: getColor('very-dark-gray'); }
+        }
+    }
+
+    .results {
+        font-family: $secondary-font;
+    
+        position: absolute;
+        bottom: -55%;
+        right: 0;
+        left: 0;
+        z-index: 2;
+    
+        background-color: white;
+        box-shadow: 0 10px 35px rgba(121, 120, 120, 0.4);
+        border-radius: $border-radius;
+        
+        padding: 1.5em 0;
+
+        &__title {
+            font-size: .6rem;
+            font-weight: getFontWeight('bold');
+            color: getColor('dark-gray');
+            
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        
+            margin-bottom: .8em;
+        }
+
+        &__result {
+            font-size: 1.2rem;
+            font-weight: getFontWeight('bold'); 
+        }
+
+        &__result:not(.results__result--isp) {
+            margin-bottom: 1.1em;
+        }
+    }
+}
+
+.mapId2 {
+    height: 80vh; 
+    z-index: 1;
+}
+
+@import './responsive';
